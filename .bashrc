@@ -118,4 +118,5 @@ fi
 . "$HOME/.cargo/env"
 export PATH=$PATH:/home/toopsi/.local/bin
 
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 bind '"\C-g":"tmux attach || tmux new -c \n"'
