@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=alcookiegamez@gmail.com
+Enabled=true
+Parent=e6c5694604965e43c3ea7c520508c0ca4f20a138
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=3cc915b1581125fab0f14f0121310c614648d01f
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=alcookiegamez@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none
