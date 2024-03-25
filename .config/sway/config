@@ -220,15 +220,13 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    font pango:Mononoki Nerd Font, Font Awesome 6 Free 11
     position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%d-%m-%Y %H:%M:%S'; do sleep 1; done
-
+    status_command $HOME/.cargo/bin/i3status-rs $HOME/.config/i3status-rust/config.toml
     colors {
-        statusline #ffffff
-        background #323232
+        separator #666666
+        background #00000090
+        statusline #00ff00
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
