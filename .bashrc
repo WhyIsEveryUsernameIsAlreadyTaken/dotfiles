@@ -116,7 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 . "$HOME/.cargo/env"
-export PATH=$PATH:/home/toopsi/.local/bin
+export PATH=$PATH:/home/toopsi/.local/bin:/usr/bin/Discord:/home/toopsi/.cargo/bin
 
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias vim='nvim'
+alias oldvim='vim'
 bind '"\C-g":"tmux attach || tmux new -c \n"'

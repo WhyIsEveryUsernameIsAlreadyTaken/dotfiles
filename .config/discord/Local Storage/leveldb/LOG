@@ -1,0 +1,15 @@
+2024/03/27-03:58:15.342 3262 Reusing MANIFEST /home/toopsi/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2024/03/27-03:58:15.342 3262 Recovering log #13
+2024/03/27-03:58:15.351 3262 Level-0 table #16: started
+2024/03/27-03:58:15.422 3262 Level-0 table #16: 741102 bytes OK
+2024/03/27-03:58:15.525 3262 Delete type=0 #13
+2024/03/27-03:58:15.527 3266 Compacting 4@0 + 1@1 files
+2024/03/27-03:58:15.622 3266 Generated table #18@0: 3 keys, 2240605 bytes
+2024/03/27-03:58:15.697 3266 Generated table #19@0: 27 keys, 778742 bytes
+2024/03/27-03:58:15.697 3266 Compacted 4@0 + 1@1 files => 3019347 bytes
+2024/03/27-03:58:15.747 3266 compacted to: files[ 0 2 1 0 0 0 0 ]
+2024/03/27-03:58:15.747 3266 Delete type=2 #9
+2024/03/27-03:58:15.747 3266 Delete type=2 #7
+2024/03/27-03:58:15.747 3266 Delete type=2 #14
+2024/03/27-03:58:15.747 3266 Delete type=2 #16
+2024/03/27-03:58:15.747 3266 Delete type=2 #11
