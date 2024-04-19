@@ -4,7 +4,7 @@ return {
 	config = function()
 		require('nvim-treesitter.configs').setup {
 			-- A list of parser names, or "all"
-			ensure_installed = { "vimdoc", "javascript", "typescript", "c", "lua", "rust", "python", "c_sharp" },
+			ensure_installed = { "vimdoc", "c", "lua", "rust", "c_sharp" },
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
 			sync_install = false,
@@ -41,4 +41,3 @@ return {
 		vim.treesitter.language.register('templ', 'templ')
 	end
 }
-

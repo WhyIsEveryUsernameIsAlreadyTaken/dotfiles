@@ -1,4 +1,3 @@
-
 return {
     "danymat/neogen",
     dependencies = {

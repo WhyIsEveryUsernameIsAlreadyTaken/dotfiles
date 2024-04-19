@@ -3,7 +3,7 @@ require("toopsi.remap")
 require("toopsi.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local ToopsiGroup = augroup('Toopsi', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -24,13 +24,13 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
+    group = ToopsiGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
 
 autocmd('LspAttach', {
-    group = ThePrimeagenGroup,
+    group = ToopsiGroup,
     callback = function(e)
         local opts = { buffer = e.buf }
 
