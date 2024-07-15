@@ -8,7 +8,13 @@ local config = wezterm.config_builder()
 config.enable_tab_bar = false
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Tokyo Night'
+local scheme = wezterm.get_builtin_color_schemes()['tokyonight_night']
+scheme.background = '#1c1c1c'
+
+config.color_schemes = {
+    ['tokyonight_night_custom'] = scheme
+}
+config.color_scheme = 'tokyonight_night_custom'
 
 -- and finally, return the configuration to wezterm
 return config

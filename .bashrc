@@ -1,3 +1,6 @@
+# Git aware prompt
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -56,11 +59,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\ '
-fi
+PROMPT_COMMAND=build_prompt
+
+build_prompt() {
+    EXIT=$?
+
+    if [ $EXIT != 0 ]; then  # add arrow color dependent on exit code
+        exitcode="\[$txtred\]→\[$txtrst\] \W "
+    else
+        exitcode="\[$txtgrn\]→\[$txtrst\] \W "
+    fi
+}
+PS1="$exitcode \[$txtcyn\]\W \[$txtblu\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] "
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -115,10 +125,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
-export PATH=$PATH:/home/toopsi/.local/bin:/usr/bin/Discord:/home/toopsi/.cargo/bin
+export PATH=$PATH:/home/toopsi/.local/bin:/home/toopsi/.cargo/bin:/home/toopsi/.local/share/applications:/usr/local/go/bin:~/.local/scripts
 
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias vim='nvim'
 alias oldvim='vim'
 bind '"\C-g":"tmux attach || tmux new\n"'
+
+export GPG_TTY=$(tty)
+. "$HOME/.cargo/env"

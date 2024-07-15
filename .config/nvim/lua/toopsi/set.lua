@@ -1,11 +1,17 @@
+vim.opt.guicursor = "n-v-c-sm:block-Cursor,i-ci-r-cr-o-ve:ver25"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
+vim.opt.tabstop = 3
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.listchars = {
+    tab="",
+    eol="󰌑",
+}
+vim.opt.list = true
 
 vim.opt.smartindent = true
 
@@ -26,4 +32,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+vim.opt.colorcolumn = "80"
 
+vim.opt.clipboard="unnamedplus"

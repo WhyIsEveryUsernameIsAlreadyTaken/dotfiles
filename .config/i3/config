@@ -4,13 +4,14 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+exec xrandr --output DisplayPort-2 --pos 1920x0 --mode 1920x1080 --rate 144 --output DisplayPort-1 --auto --pos 0x560 --output HDMI-A-0 --pos 3840x170
 
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Picom
-exec_always --no-startup-id picom &
+# exec_always --no-startup-id picom -bcCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 --config /dev/null &
 
 set $mod Mod1
 
@@ -29,7 +30,6 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-exec xrandr --output DisplayPort-2 --pos 1920x0 --mode 1920x1080 --rate 144 --output DisplayPort-1 --auto --pos 0x560 --output HDMI-A-0 --pos 3840x170
 workspace 1 output DisplayPort-2
 workspace 2 output DisplayPort-1
 workspace 3 output HDMI-A-0
@@ -159,9 +159,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-for_window [class="^.*"] border pixel 1
-                         # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -203,4 +200,8 @@ bar {
         inactive_workspace #323232 #323232 #5c5c5c
     }
 }
+for_window [class="^.*"] border pixel 1
+                         # class                 border  backgr. text    indicator child_border
+for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 exec feh --bg-fill .wallpaper/anime_girls_umbrella_cherry_blossom-1973857.png
+exec_always --no-startup-id wireplumber

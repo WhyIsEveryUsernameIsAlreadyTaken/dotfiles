@@ -100,8 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim='nvim'
-alias oldvim='vim'
+alias vi='vim'
 
 bindkey -s ^g "tmux a\n"
 bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^q "tmux kill-server\n"
+bindkey -s ^q "tmux kill-session\n"
+bindkey -s ^x "tmux kill-server\n"
+xset r rate 400 50
