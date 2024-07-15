@@ -4,7 +4,8 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-exec xrandr --output DisplayPort-2 --pos 1920x0 --mode 1920x1080 --rate 144 --output DisplayPort-1 --auto --pos 0x560 --output HDMI-A-0 --pos 3840x170
+# I WILL CHANGE THIS SOON
+# exec xrandr --output DisplayPort-2 --pos 1920x0 --mode 1920x1080 --rate 144 --output DisplayPort-1 --auto --pos 0x560 --output HDMI-A-0 --pos 3840x170
 
 # i3 config file (v4)
 #
@@ -30,9 +31,10 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-workspace 1 output DisplayPort-2
-workspace 2 output DisplayPort-1
-workspace 3 output HDMI-A-0
+# SAME WITH THIS 
+# workspace 1 output DisplayPort-2
+# workspace 2 output DisplayPort-1
+# workspace 3 output HDMI-A-0
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -203,5 +205,6 @@ bar {
 for_window [class="^.*"] border pixel 1
                          # class                 border  backgr. text    indicator child_border
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
-exec feh --bg-fill .wallpaper/anime_girls_umbrella_cherry_blossom-1973857.png
+# NEED TO CHANGE THIS TOO!!!!!!!!!!!!!!!!!
+# exec feh --bg-fill .wallpaper/anime_girls_umbrella_cherry_blossom-1973857.png
 exec_always --no-startup-id wireplumber
