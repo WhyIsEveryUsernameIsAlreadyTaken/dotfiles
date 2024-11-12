@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sudo rm -f /etc/pacman.d/mirrorlist && sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyuu

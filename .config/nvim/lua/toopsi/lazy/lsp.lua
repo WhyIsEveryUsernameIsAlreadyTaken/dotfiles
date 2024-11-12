@@ -36,10 +36,6 @@ return {
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
-                end,
-
-                ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
                     local border = {
                         {"🭽", "FloatBorder"},
                         {"▔", "FloatBorder"},
@@ -56,6 +52,11 @@ return {
                         opts.border = opts.border or border
                         return orig_util_open_floating_preview(contents, syntax, opts, ...)
                     end
+                end,
+
+                ["lua_ls"] = function()
+                    local lspconfig = require("lspconfig")
+
                     lspconfig.lua_ls.setup {
                         capabilities = capabilities,
                         settings = {

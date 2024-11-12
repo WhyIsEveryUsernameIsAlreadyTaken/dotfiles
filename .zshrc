@@ -107,3 +107,4 @@ bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^q "tmux kill-session\n"
 bindkey -s ^x "tmux kill-server\n"
 xset r rate 400 50
+export GPG_TTY=$(tty)

@@ -1,8 +1,8 @@
 return {
-
     {
         "nvim-lua/plenary.nvim",
-        name = "plenary"
+        name = "plenary",
+        priority = 1000,
     },
 
     "eandrju/cellular-automaton.nvim",

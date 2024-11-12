@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if (test -f $1); then
+    echo "$1: No such file or directory"
+    exit
+fi
+while true; do
+    procsize=$(grep 'VmRSS' /proc/$1/status | awk '{print $2/1000}')
+    echo "VmRSS: $procsize MB"
+    sleep 1s
+done
